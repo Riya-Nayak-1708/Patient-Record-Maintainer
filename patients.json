@@ -1,0 +1,222 @@
+[
+  {
+    "id": 1,
+    "name": "Aarav Sharma",
+    "age": 24,
+    "city": "Ghaziabad",
+    "height_cm": 172,
+    "weight_kg": 68,
+    "bmi": 22.99,
+    "verdict": "Normal weight",
+    "gender": "Male"
+  },
+  {
+    "id": 2,
+    "name": "Ananya Verma",
+    "age": 31,
+    "city": "Lucknow",
+    "height_cm": 160,
+    "weight_kg": 72,
+    "bmi": 28.13,
+    "verdict": "Overweight",
+    "gender": "Female"
+  },
+  {
+    "id": 3,
+    "name": "Rohan Singh",
+    "age": 45,
+    "city": "Kanpur",
+    "height_cm": 178,
+    "weight_kg": 92,
+    "bmi": 29.04,
+    "verdict": "Overweight",
+    "gender": "Male"
+  },
+  {
+    "id": 4,
+    "name": "Meera Gupta",
+    "age": 27,
+    "city": "Noida",
+    "height_cm": 155,
+    "weight_kg": 48,
+    "bmi": 19.98,
+    "verdict": "Normal weight",
+    "gender": "Female"
+  },
+  {
+    "id": 5,
+    "name": "Kabir Patel",
+    "age": 19,
+    "city": "Jaipur",
+    "height_cm": 168,
+    "weight_kg": 49,
+    "bmi": 17.36,
+    "verdict": "Underweight",
+    "gender": "Male"
+  },
+  {
+    "id": 6,
+    "name": "Ishita Mishra",
+    "age": 36,
+    "city": "Prayagraj",
+    "height_cm": 163,
+    "weight_kg": 84,
+    "bmi": 31.62,
+    "verdict": "Obesity",
+    "gender": "Female"
+  },
+  {
+    "id": 7,
+    "name": "Vivaan Yadav",
+    "age": 52,
+    "city": "Agra",
+    "height_cm": 174,
+    "weight_kg": 76,
+    "bmi": 25.1,
+    "verdict": "Overweight",
+    "gender": "Male"
+  },
+  {
+    "id": 8,
+    "name": "Sana Khan",
+    "age": 22,
+    "city": "Delhi",
+    "height_cm": 158,
+    "weight_kg": 54,
+    "bmi": 21.63,
+    "verdict": "Normal weight",
+    "gender": "Female"
+  },
+  {
+    "id": 9,
+    "name": "Aditya Joshi",
+    "age": 40,
+    "city": "Dehradun",
+    "height_cm": 181,
+    "weight_kg": 63,
+    "bmi": 19.23,
+    "verdict": "Normal weight",
+    "gender": "Male"
+  },
+  {
+    "id": 10,
+    "name": "Priya Das",
+    "age": 29,
+    "city": "Kolkata",
+    "height_cm": 162,
+    "weight_kg": 91,
+    "bmi": 34.67,
+    "verdict": "Obesity",
+    "gender": "Female"
+  },
+  {
+    "id": 11,
+    "name": "Arjun Rao",
+    "age": 33,
+    "city": "Hyderabad",
+    "height_cm": 170,
+    "weight_kg": 58,
+    "bmi": 20.07,
+    "verdict": "Normal weight",
+    "gender": "Male"
+  },
+  {
+    "id": 12,
+    "name": "Kavya Nair",
+    "age": 25,
+    "city": "Kochi",
+    "height_cm": 166,
+    "weight_kg": 47,
+    "bmi": 17.06,
+    "verdict": "Underweight",
+    "gender": "Female"
+  },
+  {
+    "id": 13,
+    "name": "Rahul Mehta",
+    "age": 61,
+    "city": "Mumbai",
+    "height_cm": 169,
+    "weight_kg": 82,
+    "bmi": 28.71,
+    "verdict": "Overweight",
+    "gender": "Male"
+  },
+  {
+    "id": 14,
+    "name": "Nisha Kapoor",
+    "age": 48,
+    "city": "Chandigarh",
+    "height_cm": 157,
+    "weight_kg": 61,
+    "bmi": 24.75,
+    "verdict": "Normal weight",
+    "gender": "Female"
+  },
+  {
+    "id": 15,
+    "name": "Dev Malhotra",
+    "age": 38,
+    "city": "Gurugram",
+    "height_cm": 185,
+    "weight_kg": 108,
+    "bmi": 31.56,
+    "verdict": "Obesity",
+    "gender": "Male"
+  },
+  {
+    "id": 16,
+    "name": "Pooja Sinha",
+    "age": 20,
+    "city": "Patna",
+    "height_cm": 150,
+    "weight_kg": 43,
+    "bmi": 19.11,
+    "verdict": "Normal weight",
+    "gender": "Female"
+  },
+  {
+    "id": 17,
+    "name": "Manav Tiwari",
+    "age": 56,
+    "city": "Varanasi",
+    "height_cm": 176,
+    "weight_kg": 54,
+    "bmi": 17.43,
+    "verdict": "Underweight",
+    "gender": "Male"
+  },
+  {
+    "id": 18,
+    "name": "Simran Kaur",
+    "age": 34,
+    "city": "Amritsar",
+    "height_cm": 164,
+    "weight_kg": 69,
+    "bmi": 25.65,
+    "verdict": "Overweight",
+    "gender": "Female"
+  },
+  {
+    "id": 19,
+    "name": "Yash Thakur",
+    "age": 28,
+    "city": "Bhopal",
+    "height_cm": 173,
+    "weight_kg": 74,
+    "bmi": 24.73,
+    "verdict": "Normal weight",
+    "gender": "Male"
+  },
+  {
+    "id": 20,
+    "name": "Aditi Roy",
+    "age": 42,
+    "city": "Bengaluru",
+    "height_cm": 159,
+    "weight_kg": 78,
+    "bmi": 30.85,
+    "verdict": "Obesity",
+    "gender": "Female"
+  }
+]
