@@ -36,15 +36,12 @@ class Patient(BaseModel):
         else:
             return "obese"
 
-
-# Load data
 def load_data():
     with open("patients.json", "r") as f:
         data = json.load(f)
     return data
 
 
-# Save data
 def save_data(data):
     with open("patients.json", "w") as f:
         json.dump(data, f, indent=4)
@@ -65,8 +62,6 @@ def view():
     data = load_data()
     return data
 
-
-# GET request - Fetch one patient
 @app.get("/patient/{patient_id}")
 def patients(patient_id: str):
     data = load_data()
@@ -80,7 +75,6 @@ def patients(patient_id: str):
     )
 
 
-# POST request - Add a new patient
 @app.post("/create")
 def create_patient(patient: Patient):
 
@@ -98,5 +92,37 @@ def create_patient(patient: Patient):
 
     return {
         "message": "Patient added successfully",
+        "patient": patient
+    }
+
+
+
+@app.put("/edit/{patient_id}")
+def update_patient(patient_id: str, patient: Patient):
+
+    data = load_data()
+
+    # Check whether patient exists
+    if patient_id not in data:
+        raise HTTPException(
+            status_code=404,
+            detail="Patient not found"
+        )
+
+
+    if patient.id != patient_id:
+        raise HTTPException(
+            status_code=400,
+            detail="Patient ID does not match"
+        )
+
+   
+    data[patient_id] = patient.model_dump()
+
+   
+    save_data(data)
+
+    return {
+        "message": "Patient updated successfully",
         "patient": patient
     }
