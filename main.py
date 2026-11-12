@@ -126,3 +126,27 @@ def update_patient(patient_id: str, patient: Patient):
         "message": "Patient updated successfully",
         "patient": patient
     }
+
+
+
+@app.delete("/delete/{patient_id}")
+def delete_patient(patient_id: str):
+
+    data = load_data()
+
+    if patient_id not in data:
+        raise HTTPException(
+            status_code=404,
+            detail="Patient not found"
+        )
+
+   
+    deleted_patient = data.pop(patient_id)
+
+    # Save updated data
+    save_data(data)
+
+    return {
+        "message": "Patient deleted successfully",
+        "deleted_patient": deleted_patient
+    }
