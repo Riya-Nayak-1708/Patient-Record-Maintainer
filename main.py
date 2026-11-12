@@ -6,8 +6,6 @@ import json
 
 app = FastAPI()
 
-
-# Patient Model
 class Patient(BaseModel):
 
     id: Annotated[str, Field(..., description="Patient ID", example="1")]
@@ -35,6 +33,15 @@ class Patient(BaseModel):
             return "overweight"
         else:
             return "obese"
+    
+class PatientUpdate(BaseModel):
+    name: str | None = None
+    city: str | None = None
+    gender: Literal["male", "female", "others"] | None = None
+    age: int | None = Field(default=None, gt=0)
+    weight_kg: float | None = Field(default=None, gt=0)
+    height_cm: float | None = Field(default=None, gt=0)
+
 
 def load_data():
     with open("patients.json", "r") as f:
@@ -149,4 +156,39 @@ def delete_patient(patient_id: str):
     return {
         "message": "Patient deleted successfully",
         "deleted_patient": deleted_patient
+    }
+
+@app.patch("/edit/{patient_id}")
+def update_patient_partial(patient_id: str, patient_update: PatientUpdate):
+
+    data = load_data()
+
+    # Check patient exists
+    if patient_id not in data:
+        raise HTTPException(
+            status_code=404,
+            detail="Patient not found"
+        )
+
+   
+    existing_patient = data[patient_id]
+    update_data = patient_update.model_dump(exclude_unset=True)
+
+    if not update_data:
+        raise HTTPException(
+            status_code=400,
+            detail="No fields provided for update"
+        )
+
+    updated_patient = {**existing_patient, **update_data}
+
+    validated_patient = Patient(**updated_patient)
+
+    data[patient_id] = validated_patient.model_dump()
+
+    save_data(data)
+
+    return {
+        "message": "Patient updated successfully",
+        "patient": validated_patient
     }
